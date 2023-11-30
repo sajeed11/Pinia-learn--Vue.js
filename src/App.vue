@@ -17,7 +17,7 @@
 
 <script>
 import TasckDetails from './components/TaskDetails.vue'
-import {useTaskStore} from './stores/taskStore'
+import {useTaskStore} from './stores/TaskStore'
 export default {
     components: {
         TasckDetails
