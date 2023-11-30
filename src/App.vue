@@ -6,6 +6,12 @@
             <h1>Pinia Mini Project</h1>
         </header>
 
+        <!--task form-->
+
+        <div class="new-task-form">
+            <TaskForm />
+        </div>
+
         <!--Filter-->
 
         <nav class="filter">
@@ -33,10 +39,12 @@
 import {ref} from 'vue'
 import TaskDetails from './components/TaskDetails.vue'
 import {useTaskStore} from './stores/TaskStore'
+import TaskForm from './components/TaskForm.vue'
 export default {
     components: {
-        TaskDetails
-    },
+    TaskDetails,
+    TaskForm
+},
     setup() {
         const taskStore = useTaskStore()
 
