@@ -1,29 +1,29 @@
 {
-    "tasks": [
-        {
-            "id": 1,
-            "name": "Get Milk",
-            "isfav": false
-        },
-        {
-            "id": 2,
-            "name": "Learn Angular",
-            "isfav": true
-        },
-        {
-            "id": 3,
-            "name": "Play Basketball",
-            "isfav": true
-        },
-        {
-            "id": 4,
-            "name": "Configure the app",
-            "isfav": false
-        },
-        {
-            "id": 5,
-            "name": "Listen to music",
-            "isfav": true
-        }
-    ]
+  "tasks": [
+    {
+      "id": 2,
+      "name": "Learn Angular",
+      "isfav": true
+    },
+    {
+      "id": 3,
+      "name": "Play Basketball",
+      "isfav": true
+    },
+    {
+      "id": 4,
+      "name": "Configure the app",
+      "isfav": true
+    },
+    {
+      "id": 5,
+      "name": "Listen to music",
+      "isfav": false
+    },
+    {
+      "name": "Play Rocket League",
+      "isFav": false,
+      "id": 14927
+    }
+  ]
 }

@@ -1,5 +1,8 @@
 import { defineStore } from 'pinia'
 
+// The url is just for the example, you would use a service for that
+const URL = 'http://localhost:3000/tasks'
+
 export const useTaskStore =  defineStore('task', {
     state: () => ({
         tasks: [],
@@ -22,7 +25,7 @@ export const useTaskStore =  defineStore('task', {
         async getTasks() {
             this.loading = true
 
-            const res = await fetch("http://localhost:3000/tasks")
+            const res = await fetch(URL)
             const data = await res.json();
 
             this.tasks = data;
@@ -31,7 +34,7 @@ export const useTaskStore =  defineStore('task', {
         async addTask(task) {
             this.tasks.push(task);
 
-            const res = await fetch("http://localhost:3000/tasks", {
+            const res = await fetch(URL, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -46,7 +49,7 @@ export const useTaskStore =  defineStore('task', {
         async removeTask(id) {
             this.tasks = this.tasks.filter(t => t.id !== id);
 
-            const res = await fetch("http://localhost:3000/tasks/" + id, {
+            const res = await fetch(URL + id, {
                 method: "DELETE"
             });
 
@@ -58,7 +61,7 @@ export const useTaskStore =  defineStore('task', {
             const task = this.tasks.find(t => t.id === id);
             task.isfav = !task.isfav;
 
-            const res = await fetch("http://localhost:3000/tasks/" + id, {
+            const res = await fetch(URL + id, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json"
